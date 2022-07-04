@@ -4,6 +4,7 @@ import { AddNewPage } from "./pages/AddNewPage";
 import { EditCardPage } from "./pages/EditCardPage";
 import { EnterPage } from "./pages/EnterPage";
 
+
 function App() {
   return (
     <div className="App">

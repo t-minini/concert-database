@@ -6,6 +6,7 @@ export function Home() {
   return (
     <>
       <h1>CONCERT'S DATABASE</h1>
+      <h3>HOME</h3>
       <ConcertCard />
       <Link to={"/add-new"} style={{ textDecoration: "none" }}>
         <Button size="small" variant="contained" color="success">
