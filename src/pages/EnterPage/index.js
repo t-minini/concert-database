@@ -8,11 +8,14 @@ export function EnterPage() {
     <>
       <div>
         <h1>CONCERT'S DATABASE</h1>
-        <Link to={`/home`} style={{ textDecoration: "none" }}>
+        <Link to={"/home"} style={{ textDecoration: "none" }}>
           <Button variant="contained">ENTER</Button>
         </Link>
       </div>
       <div>
+        <div>
+          <h2>Created by</h2>
+        </div>
         <div>
           <h3>Tulio Minini</h3>
           <a href="https://github.com/t-minini">
@@ -23,7 +26,7 @@ export function EnterPage() {
           </a>
         </div>
         <div>
-          <h3 divider>Lucas Colombo</h3>
+          <h3>Lucas Colombo</h3>
           <a href="https://github.com/lucasalbacolombo">
             <GitHubIcon fontSize="large" />
           </a>
