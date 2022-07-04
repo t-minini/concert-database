@@ -3,6 +3,9 @@ import { CountrySelect } from '../../components/CountrySelect';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
@@ -46,14 +49,18 @@ export function AddNewPage() {
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
-				<TextField
+				<InputLabel id='demo-simple-select-label'>Owner</InputLabel>
+				<Select
+					labelId='owner'
 					id='owner'
-					label='Owner'
-					variant='outlined'
 					name='owner'
 					value={form.owner}
+					label='owner'
 					onChange={handleChange}
-				/>
+				>
+					<MenuItem value={'Tulio Minini'}>Tulio Minini</MenuItem>
+					<MenuItem value={'Lucas Colombo'}>Lucas Colombo</MenuItem>
+				</Select>
 				<TextField
 					id='concert-tour'
 					label='Concert/Tour'
@@ -78,7 +85,11 @@ export function AddNewPage() {
 					value={form.date}
 					onChange={handleChange}
 				/>
-				<CountrySelect />
+				<CountrySelect
+					value={form.country}
+					name='country'
+					onChange={handleChange}
+				/>
 				<TextField
 					id='city'
 					label='City'
@@ -97,7 +108,7 @@ export function AddNewPage() {
 						name='rating'
 						defaultValue={2.5}
 						precision={0.5}
-						value={form.rating}
+						value={value}
 						onChange={(target, newValue) => {
 							setValue(newValue);
 						}}
