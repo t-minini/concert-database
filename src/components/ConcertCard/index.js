@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const card = (
   <React.Fragment>
@@ -31,9 +32,18 @@ const card = (
     </CardContent>
     <CardActions>
       <Link to={"/edit"} style={{ textDecoration: "none" }}>
-        <Button size="small">EDIT</Button>
+        <Button size="medium" variant="outlined">
+          EDIT
+        </Button>
       </Link>
-      <Button size="small">DELETE</Button>
+      <Button
+        size="medium"
+        variant="outlined"
+        color="error"
+        startIcon={<DeleteIcon />}
+      >
+        DELETE
+      </Button>
     </CardActions>
   </React.Fragment>
 );
