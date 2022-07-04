@@ -2,15 +2,15 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+// const navigate = useNavigate();
+
+// MATERIAL UI COMPONENTS
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import DeleteIcon from "@mui/icons-material/Delete";
-
-// const navigate = useNavigate();
 
 export function ConcertCard() {
   const [concerts, setConcerts] = useState([{}]);
@@ -31,7 +31,7 @@ export function ConcertCard() {
     fetchConcerts();
   }, []);
 
-  //   import { useParams } from "react-router-dom";
+  //HANDLEDELETE PARA SER USADO NA EDIT PAGE
   //   const { _id } = useParams();
 
   //   async function handleDelete() {
@@ -39,53 +39,67 @@ export function ConcertCard() {
   //       const response = await axios.delete(
   //         `https://ironrest.herokuapp.com/project-two-tulio-lucas/${_id}`
   //       );
-  //       //   console.log(response);
-  //     } catch (err) {
-  //       console.log(err);
+  //       console.log(response._id);
+  //     } catch (error) {
+  //       console.log(error);
   //     }
   //   }
 
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          REVIEW
-        </Typography>
-        <Typography variant="h5" component="div">
-          CONCERT/TOUR
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          ATTENDEE
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          ARTIST
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          DATE
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          COUNTRY
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          CITY
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Link to={"/edit"} style={{ textDecoration: "none" }}>
-          <Button size="medium" variant="outlined">
-            EDIT
-          </Button>
-        </Link>
-        <Button
-          size="medium"
-          variant="outlined"
-          color="error"
-          startIcon={<DeleteIcon />}
-          //   onClick={console.log("FUNCIONAAA!")}
-        >
-          DELETE
-        </Button>
-      </CardActions>
-    </Card>
+    <>
+      <div key={concerts.id}>
+        {concerts.map((currentConcert) => {
+          return (
+            <Card sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  {currentConcert.rating}
+                </Typography>
+                <Typography variant="h5" component="div">
+                  {currentConcert.concert}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {currentConcert.artist}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {currentConcert.owner}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {currentConcert.date}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {currentConcert.country}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                  {currentConcert.city}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link to={"/edit"} style={{ textDecoration: "none" }}>
+                  <Button size="medium" variant="outlined">
+                    EDIT
+                  </Button>
+                </Link>
+              </CardActions>
+            </Card>
+          );
+        })}
+      </div>
+    </>
   );
 }
+
+//DELETE BUTTON PARA SER USADO NA EDIT PAGE
+/* <Button
+size="medium"
+variant="outlined"
+color="error"
+startIcon={<DeleteIcon />}
+//   onClick={console.log("FUNCIONAAA!")}
+>
+DELETE
+</Button> */
