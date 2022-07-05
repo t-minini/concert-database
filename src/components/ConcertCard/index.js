@@ -32,10 +32,10 @@ export function ConcertCard() {
 
 	return (
 		<>
-			<div key={concerts.id}>
+			<div>
 				{concerts.map((currentConcert) => {
 					return (
-						<Card sx={{ minWidth: 275 }}>
+						<Card sx={{ minWidth: 275 }} key={currentConcert._id}>
 							<CardContent>
 								<Typography
 									sx={{ fontSize: 14 }}
