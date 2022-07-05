@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// const navigate = useNavigate();
+
 
 // MATERIAL UI COMPONENTS
 import Card from "@mui/material/Card";
@@ -10,7 +10,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
 
 export function ConcertCard() {
   const [concerts, setConcerts] = useState([{}]);
@@ -30,20 +29,6 @@ export function ConcertCard() {
     }
     fetchConcerts();
   }, []);
-
-  //HANDLEDELETE PARA SER USADO NA EDIT PAGE
-  //   const { _id } = useParams();
-
-  //   async function handleDelete() {
-  //     try {
-  //       const response = await axios.delete(
-  //         `https://ironrest.herokuapp.com/project-two-tulio-lucas/${_id}`
-  //       );
-  //       console.log(response._id);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
 
   return (
     <>
@@ -92,14 +77,3 @@ export function ConcertCard() {
     </>
   );
 }
-
-//DELETE BUTTON PARA SER USADO NA EDIT PAGE
-/* <Button
-size="medium"
-variant="outlined"
-color="error"
-startIcon={<DeleteIcon />}
-//   onClick={console.log("FUNCIONAAA!")}
->
-DELETE
-</Button> */

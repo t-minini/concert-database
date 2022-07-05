@@ -1,5 +1,7 @@
-import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+
+// MATERIAL UI COMPONENTS
+import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
