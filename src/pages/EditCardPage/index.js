@@ -163,7 +163,6 @@ export function EditCardPage() {
 				/>
 				<CountrySelect
 					country={country}
-					// value={country.label}
 					handleCountry={handleCountry}
 					name='country'
 				/>
@@ -183,9 +182,8 @@ export function EditCardPage() {
 					<Typography component='legend'>Rating</Typography>
 					<Rating
 						name='rating'
-						defaultValue={form.rating}
 						precision={1}
-						value={value}
+						value={form.rating}
 						onChange={handleRating}
 					/>
 				</Box>
