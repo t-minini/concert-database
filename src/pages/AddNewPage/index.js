@@ -6,15 +6,13 @@ import Typography from '@mui/material/Typography';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
 export function AddNewPage() {
 	const navigate = useNavigate();
-
-	const [value, setValue] = useState(2);
 
 	const [form, setForm] = useState({
 		owner: '',
@@ -23,10 +21,27 @@ export function AddNewPage() {
 		date: '',
 		country: '',
 		city: '',
-		rating: value,
+		rating: 3,
 	});
 
+	const [value, setValue] = useState(3);
+
+	const [country, setCountry] = useState({ label: '' });
+
 	function handleChange(event) {
+		setForm({ ...form, [event.target.name]: event.target.value });
+	}
+
+	function handleCountry(event, newValue) {
+		setCountry(newValue);
+	}
+
+	useEffect(() => {
+		setForm({ ...form, country: country.label });
+	}, [country]);
+
+	function handleRating(event, newValue) {
+		setValue(newValue);
 		setForm({ ...form, [event.target.name]: event.target.value });
 	}
 
@@ -44,6 +59,7 @@ export function AddNewPage() {
 	}
 
 	console.log(value);
+	console.log(country);
 	console.log(form);
 
 	return (
@@ -86,9 +102,10 @@ export function AddNewPage() {
 					onChange={handleChange}
 				/>
 				<CountrySelect
-					value={form.country}
+					country={country}
+					// value={country.label}
+					handleCountry={handleCountry}
 					name='country'
-					onChange={handleChange}
 				/>
 				<TextField
 					id='city'
@@ -106,12 +123,10 @@ export function AddNewPage() {
 					<Typography component='legend'>Rating</Typography>
 					<Rating
 						name='rating'
-						defaultValue={2.5}
-						precision={0.5}
+						defaultValue={3}
+						precision={1}
 						value={value}
-						onChange={(target, newValue) => {
-							setValue(newValue);
-						}}
+						onChange={handleRating}
 					/>
 				</Box>
 				<Button variant='contained' type='submit'>
