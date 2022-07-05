@@ -1,15 +1,17 @@
-import TextField from '@mui/material/TextField';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { CountrySelect } from '../../components/CountrySelect';
+
+// MATERIAL UI COMPONENTS
+import Button from '@mui/material/Button';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom';
+import TextField from '@mui/material/TextField';
+import Select from '@mui/material/Select';
 
 export function AddNewPage() {
 	const navigate = useNavigate();
@@ -52,7 +54,7 @@ export function AddNewPage() {
 				'https://ironrest.herokuapp.com/project-two-tulio-lucas',
 				form
 			);
-			navigate('/');
+			navigate('/home');
 		} catch (error) {
 			console.log(error);
 		}
@@ -103,7 +105,6 @@ export function AddNewPage() {
 				/>
 				<CountrySelect
 					country={country}
-					// value={country.label}
 					handleCountry={handleCountry}
 					name='country'
 				/>
