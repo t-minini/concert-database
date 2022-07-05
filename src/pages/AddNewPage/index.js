@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { CountrySelect } from '../../components/CountrySelect';
 
@@ -12,6 +12,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import HomeIcon from '@mui/icons-material/Home';
 
 export function AddNewPage() {
 	const navigate = useNavigate();
@@ -66,6 +70,26 @@ export function AddNewPage() {
 
 	return (
 		<>
+			<Box sx={{ flexGrow: 1 }}>
+				<AppBar position='static'>
+					<Toolbar>
+						<IconButton
+							size='large'
+							edge='start'
+							color='inherit'
+							aria-label='home'
+							sx={{ mr: 2 }}
+						>
+							<Link to={'/home'} style={{ textDecoration: 'none' }}>
+								<HomeIcon sx={{ fontSize: 30, color: '#ffffff' }}></HomeIcon>
+							</Link>
+						</IconButton>
+						<Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+							<strong>Add New</strong>
+						</Typography>
+					</Toolbar>
+				</AppBar>
+			</Box>
 			<form onSubmit={handleSubmit}>
 				<InputLabel id='demo-simple-select-label'>Owner</InputLabel>
 				<Select
