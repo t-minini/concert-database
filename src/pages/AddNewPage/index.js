@@ -71,8 +71,8 @@ export function AddNewPage() {
   console.log(form);
 
   return (
-    <div>
-      <Box sx={{ flexGrow: 1 }}>
+    <div className={style.general}>
+      <Box className={style.bar} sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -93,77 +93,94 @@ export function AddNewPage() {
         </AppBar>
       </Box>
       <form
+        className={style.form}
         style={{ backgroundColor: "white", marginTop: "10px" }}
-        className={style.general}
         onSubmit={handleSubmit}
       >
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Ateendee</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            name="owner"
-            value={form.owner}
-            label="Ateendee"
+        <div>
+          <TextField
+            className={style.textField}
+            id="concert-tour"
+            label="Concert/Tour"
+            variant="outlined"
+            name="concert"
+            value={form.concert}
             onChange={handleChange}
-            //   style={{ color: "black" }}
-          >
-            <MenuItem value={"Tulio Minini"}>Tulio Minini</MenuItem>
-            <MenuItem value={"Lucas Colombo"}>Lucas Colombo</MenuItem>
-          </Select>
-        </FormControl>
-        <TextField
-          id="concert-tour"
-          label="Concert/Tour"
-          variant="outlined"
-          name="concert"
-          value={form.concert}
-          onChange={handleChange}
-        />
-        <TextField
-          id="artist"
-          label="Artist"
-          variant="outlined"
-          name="artist"
-          value={form.artist}
-          onChange={handleChange}
-        />
-        <TextField
-          id="date"
-          label="Date"
-          variant="outlined"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-        />
-        <CountrySelect
-          country={country}
-          handleCountry={handleCountry}
-          name="country"
-        />
-        <TextField
-          id="city"
-          label="City"
-          variant="outlined"
-          name="city"
-          value={form.city}
-          onChange={handleChange}
-        />
-        <Box
-          sx={{
-            "& > legend": { mt: 2 },
-          }}
-        >
-          <Typography component="legend">Rating</Typography>
-          <Rating
-            name="rating"
-            defaultValue={3}
-            precision={1}
-            value={value}
-            onChange={handleRating}
           />
-        </Box>
-        <Button variant="contained" type="submit">
+        </div>
+        <div>
+          <FormControl className={style.textField}>
+            <InputLabel id="demo-simple-select-label">Ateendee</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              name="owner"
+              value={form.owner}
+              label="Ateendee"
+              onChange={handleChange}
+            >
+              <MenuItem value={"Tulio Minini"}>Tulio Minini</MenuItem>
+              <MenuItem value={"Lucas Colombo"}>Lucas Colombo</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+        <div>
+          <TextField
+            className={style.textField}
+            id="artist"
+            label="Artist"
+            variant="outlined"
+            name="artist"
+            value={form.artist}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <TextField
+            className={style.textField}
+            id="date"
+            label="Date"
+            variant="outlined"
+            name="date"
+            value={form.date}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={style.textField}>
+          <CountrySelect
+            country={country}
+            handleCountry={handleCountry}
+            name="country"
+          />
+        </div>
+        <div>
+          <TextField
+            className={style.textField}
+            id="city"
+            label="City"
+            variant="outlined"
+            name="city"
+            value={form.city}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={style.textField}>
+          <Box
+            sx={{
+              "& > legend": { mt: 2 },
+            }}
+          >
+            <Typography component="legend">Rating</Typography>
+            <Rating
+              name="rating"
+              defaultValue={3}
+              precision={1}
+              value={value}
+              onChange={handleRating}
+            />
+          </Box>
+        </div>
+        <Button className={style.textField} variant="contained" type="submit">
           Submit
         </Button>
       </form>
