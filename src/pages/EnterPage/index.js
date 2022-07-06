@@ -27,21 +27,21 @@ export function EnterPage() {
           </div>
           <div className={style.namesGroup}>
             <div className={style.names}>
-              <h3>TULIO MININI</h3>
+              <h3>Tulio Minini</h3>
               <a href="https://github.com/t-minini">
-                <GitHubIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+                <GitHubIcon sx={{ margin: 1, fontSize: 25, color: "#ffffff" }} />
               </a>
               <a href="https://www.linkedin.com/in/tulio-minini/">
-                <LinkedInIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+                <LinkedInIcon sx={{ margin: 1, fontSize: 27, color: "#ffffff" }} />
               </a>
             </div>
             <div className={style.names}>
-              <h3>LUCAS COLOMBO</h3>
+              <h3>Lucas Colombo</h3>
               <a href="https://github.com/lucasalbacolombo">
-                <GitHubIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+                <GitHubIcon sx={{ margin: 1, fontSize: 25, color: "#ffffff" }} />
               </a>
               <a href="https://www.linkedin.com/in/lucas-colombo-b7864591/">
-                <LinkedInIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+                <LinkedInIcon sx={{ margin: 1, fontSize: 27, color: "#ffffff" }} />
               </a>
             </div>
           </div>

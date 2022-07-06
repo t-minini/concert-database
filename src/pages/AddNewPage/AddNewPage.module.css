@@ -1,0 +1,12 @@
+.general {
+    height: 740px;
+    width: 1110px;
+    text-align: center;
+    /* max-width: 1000px; */
+    margin: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+  }
