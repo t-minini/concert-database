@@ -20,6 +20,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import FormControl from "@mui/material/FormControl";
 
 export function EditCardPage() {
+
   const navigate = useNavigate();
 
   const [value, setValue] = useState();
