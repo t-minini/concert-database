@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import style from "./EnterPage.module.css";
+import backgroundImg from "../../images/crowd-background-1.avif";
 
 // MATERIAL UI COMPONENTS
 import Button from "@mui/material/Button";
@@ -8,33 +10,41 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export function EnterPage() {
   return (
     <>
-      <div>
-        <h1>CONCERT'S DATABASE</h1>
-        <Link to={"/home"} style={{ textDecoration: "none" }}>
-          <Button variant="contained">ENTER</Button>
-        </Link>
-      </div>
-      <div>
-        <div>
-          <h2>Created by</h2>
+      <div
+        className={style.general}
+        style={{ backgroundImage: `url(${backgroundImg})` }}
+      >
+        <div className={style.enterPage}>
+          <h1 className={style.h1}>Concert's</h1>
+          <h2 className={style.h2}>DATABASE</h2>
+          <Link to={"/home"} style={{ textDecoration: "none" }}>
+            <h2 className={style.enterLink}>ENTER</h2>
+          </Link>
         </div>
-        <div>
-          <h3>Tulio Minini</h3>
-          <a href="https://github.com/t-minini">
-            <GitHubIcon fontSize="large" />
-          </a>
-          <a href="https://www.linkedin.com/in/tulio-minini/">
-            <LinkedInIcon fontSize="large" />
-          </a>
-        </div>
-        <div>
-          <h3>Lucas Colombo</h3>
-          <a href="https://github.com/lucasalbacolombo">
-            <GitHubIcon fontSize="large" />
-          </a>
-          <a href="https://www.linkedin.com/in/lucas-colombo-b7864591/">
-            <LinkedInIcon fontSize="large" />
-          </a>
+        <div className={style.createdBy}>
+          <div>
+            <h2>CREATED BY</h2>
+          </div>
+          <div className={style.namesGroup}>
+            <div className={style.names}>
+              <h3>TULIO MININI</h3>
+              <a href="https://github.com/t-minini">
+                <GitHubIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/tulio-minini/">
+                <LinkedInIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+              </a>
+            </div>
+            <div className={style.names}>
+              <h3>LUCAS COLOMBO</h3>
+              <a href="https://github.com/lucasalbacolombo">
+                <GitHubIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/lucas-colombo-b7864591/">
+                <LinkedInIcon sx={{ margin: 1, fontSize: 15, color: "#ffffff" }} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>

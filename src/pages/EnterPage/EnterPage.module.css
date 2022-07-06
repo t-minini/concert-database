@@ -1,0 +1,76 @@
+.general {
+  height: 800px;
+  width: 800px;
+  /* max-width: 1000px; */
+  margin: 10px;
+  /* object-fit: cover; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+}
+.enterPage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.h1 {
+  font-family: "The Nautigal", cursive;
+  font-size: 180px;
+  height: 150px;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+.h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+  font-size: 25px;
+  /* background-color: black; */
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;
+  padding: 5px 8px;
+  margin-top: 13px;
+  margin-bottom: 0px;
+  margin-left: 250px;
+}
+.enterLink {
+  /* margin-top: 100px; */
+  color: aliceblue;
+  margin: 0px;
+  margin-top: 90px;
+  font-size: 30px;
+}
+.createdBy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 10px; */
+}
+.createdBy h2 {
+  color: aliceblue;
+  font-size: 16px;
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+.namesGroup {
+  text-align: center;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0px; */
+}
+
+.names {
+  margin: 0px 10px;
+}
+.names h3 {
+  font-size: 10px;
+  margin: 5px 0px 0px 0px;
+}
