@@ -170,19 +170,29 @@ export function AddNewPage() {
               "& > legend": { mt: 2 },
             }}
           >
-            <Typography component="legend">Rating</Typography>
+            <Typography component="legend" style={{ fontSize: "22px" }}>
+              Rating
+            </Typography>
             <Rating
               name="rating"
               defaultValue={3}
               precision={1}
               value={value}
               onChange={handleRating}
+              style={{ fontSize: "30px" }}
             />
           </Box>
         </div>
-        <Button className={style.textField} variant="contained" type="submit">
-          Submit
-        </Button>
+        <div>
+          <Button
+            className={style.textField}
+            style={{ width: "146px" }}
+            variant="contained"
+            type="submit"
+          >
+            Submit
+          </Button>
+        </div>
       </form>
     </div>
   );
