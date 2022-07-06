@@ -6,7 +6,6 @@ import style from './ConcertCard.module.css';
 
 // MATERIAL UI COMPONENTS
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -40,17 +39,18 @@ export function ConcertCard() {
 				justifyContent='flex-start'
 				alignItems='center'
 				flexWrap='wrap'
+				className={style.scroll}
 			>
 				{concerts.map((currentConcert) => {
 					return (
 						<>
-							<Grid item xs={12} sm={5}>
+							<Grid item xs={12} sm={6}>
 								<Card
 									sx={{ minWidth: 275 }}
 									key={currentConcert._id}
 									className={style.mainCard}
 								>
-									<CardContent>
+									<CardContent className={style.cardContent}>
 										<Typography
 											sx={{ fontSize: 14 }}
 											color='text.secondary'
@@ -64,32 +64,39 @@ export function ConcertCard() {
 												readOnly
 											/>
 										</Typography>
-										<Typography sx={{ mb: 1.5 }} color='text.secondary'>
+
+										<Typography
+											sx={{ mb: 1.5 }}
+											color='text.secondary'
+											className={style.artist}
+										>
 											{currentConcert.artist}
 										</Typography>
-										<Typography sx={{ mb: 1.5 }} color='text.secondary'>
-											{currentConcert.owner}
-										</Typography>
-										<Typography sx={{ mb: 1.5 }} color='text.secondary'>
-											{currentConcert.date}
-										</Typography>
-										<Typography sx={{ mb: 1.5 }} color='text.secondary'>
-											{currentConcert.country}
-										</Typography>
-										<Typography sx={{ mb: 1.5 }} color='text.secondary'>
-											{currentConcert.city}
-										</Typography>
+										<div className={style.cardInfo}>
+											<Typography sx={{ mb: 1.5 }} color='text.secondary'>
+												{currentConcert.owner}
+											</Typography>
+											<Typography sx={{ mb: 1.5 }} color='text.secondary'>
+												{currentConcert.date}
+											</Typography>
+											<Typography sx={{ mb: 1.5 }} color='text.secondary'>
+												{currentConcert.country}
+											</Typography>
+											<div className={style.cardActions}>
+												<Typography sx={{ mb: 1.5 }} color='text.secondary'>
+													{currentConcert.city}
+												</Typography>
+												<Link
+													to={`/edit/${currentConcert._id}`}
+													style={{ textDecoration: 'none' }}
+												>
+													<Button size='medium' variant='outlined'>
+														EDIT
+													</Button>
+												</Link>
+											</div>
+										</div>
 									</CardContent>
-									<CardActions>
-										<Link
-											to={`/edit/${currentConcert._id}`}
-											style={{ textDecoration: 'none' }}
-										>
-											<Button size='medium' variant='outlined'>
-												EDIT
-											</Button>
-										</Link>
-									</CardActions>
 								</Card>
 							</Grid>
 						</>

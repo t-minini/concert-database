@@ -16,25 +16,38 @@ export function Home() {
 			<Box sx={{ flexGrow: 1 }}>
 				<AppBar position='static'>
 					<Toolbar>
-						<Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+						<Typography
+							variant='h6'
+							component='div'
+							sx={{ flexGrow: 1 }}
+							className={style.homeBar}
+						>
 							<strong>Home</strong>
 						</Typography>
 					</Toolbar>
 				</AppBar>
 			</Box>
-			<h1>CONCERT'S DATABASE</h1>
-			<Box sx={{ flexGrow: 1 }} direction='row'>
-				<Grid container spacing={1} columns={{ xs: 12, sm: 8, md: 12 }}>
-					<Grid item xs={12} sm>
-						<ConcertCard />
+			<div className={style.scroll}>
+				<Box sx={{ flexGrow: 1 }} direction='row'>
+					<Grid container spacing={1}>
+						<Grid item>
+							<ConcertCard />
+						</Grid>
 					</Grid>
-				</Grid>
-			</Box>
-			<Link to={'/add-new'} style={{ textDecoration: 'none' }}>
-				<Button size='small' variant='contained' color='success'>
-					ADD NEW
-				</Button>
-			</Link>
+				</Box>
+			</div>
+			<div className={style.btn}>
+				<Link to={'/add-new'} style={{ textDecoration: 'none' }}>
+					<Button
+						size='medium'
+						variant='contained'
+						color='success'
+						className={style.addNew}
+					>
+						ADD NEW
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }
