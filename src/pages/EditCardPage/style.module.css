@@ -1,0 +1,36 @@
+.editForm {
+	background-color: white;
+	height: 650px;
+	margin: 10px;
+	border-radius: 4px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formControl {
+	display: flex;
+	align-items: center;
+	width: 900px;
+	margin-bottom: 10px !important;
+}
+
+.editInput {
+	width: 900px;
+	margin-bottom: 12px !important;
+}
+
+.rating {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 200px;
+}
+
+.editBtn {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 15px;
+	width: 350px;
+}
