@@ -10,8 +10,8 @@ export function CountrySelect(props) {
 			sx={{ width: 300 }}
 			options={countries}
 			autoHighlight
-			value={countries.label}
-			name={props.country}
+			// value={countries.label}
+			name='country'
 			onChange={props.handleCountry}
 			getOptionLabel={(option) => option.label}
 			renderOption={(props, option) => (

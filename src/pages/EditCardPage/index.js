@@ -165,7 +165,9 @@ export function EditCardPage() {
 					country={country}
 					handleCountry={handleCountry}
 					name='country'
+					countryName={form.country}
 				/>
+				<p>{form.country}</p>
 				<TextField
 					id='city'
 					label='City'
@@ -183,7 +185,7 @@ export function EditCardPage() {
 					<Rating
 						name='rating'
 						precision={1}
-						value={form.rating}
+						value={Number(form.rating)}
 						onChange={handleRating}
 					/>
 				</Box>
