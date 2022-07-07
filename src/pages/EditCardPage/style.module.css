@@ -26,12 +26,12 @@
 	margin-bottom: 12px !important;
 }
 
-/* .rating {
+.rating {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-size: 200px;
-} */
+}
 
 .editBtn {
 	display: flex;
