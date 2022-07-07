@@ -49,3 +49,73 @@
 .editRating {
 	margin-top: 25px;
 }
+
+@media only screen and (max-width: 820px) {
+	.general {
+		width: 100% !important;
+		margin: auto;
+	}
+	.editForm {
+		height: 1050px;
+		margin-top: 10px;
+		padding: 10px;
+	}
+	.editInput {
+		width: 700px;
+		height: 70px;
+		margin-bottom: 20px !important;
+	}
+	.formControl {
+		width: 700px;
+		margin-bottom: 25px !important;
+		margin-bottom: 30px !important;
+	}
+	.editBtn {
+		margin: 30px;
+		width: 350px;
+	}
+	.btnStyle {
+		width: 160px;
+		height: 50px;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	.general {
+		width: 100% !important;
+	}
+	.editForm {
+		height: 750px;
+	}
+	.editInput {
+		width: 500px;
+		height: 70px;
+	}
+	.formControl {
+		width: 500px;
+	}
+	.btnStyle {
+		width: 160px;
+		height: 40px;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.editForm {
+		height: 800px;
+	}
+	.editInput {
+		width: 350px;
+		height: 70px;
+	}
+	.formControl {
+		width: 350px;
+	}
+	.starRating {
+		font-size: 40px !important;
+	}
+	.btnStyle {
+		width: 160px;
+		height: 40px;
+	}
+}
