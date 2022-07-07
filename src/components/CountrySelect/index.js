@@ -5,7 +5,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 
 export function CountrySelect(props) {
   return (
-    <div style={{ width: "900px" }}>
+    <div>
       <Autocomplete
         id="country-select-demo"
         // sx={{ width: 300 }}

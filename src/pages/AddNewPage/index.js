@@ -86,7 +86,12 @@ export function AddNewPage() {
                 <HomeIcon sx={{ fontSize: 30, color: "#ffffff" }}></HomeIcon>
               </Link>
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+              style={{ marginRight: "50px" }}
+            >
               <strong>Add New</strong>
             </Typography>
           </Toolbar>
@@ -174,7 +179,7 @@ export function AddNewPage() {
                 "& > legend": { mt: 2 },
               }}
             >
-              <Typography component="legend" style={{ fontSize: "22px" }}>
+              <Typography component="legend" style={{ fontSize: "25px" }}>
                 Rating
               </Typography>
               <Rating
@@ -184,6 +189,7 @@ export function AddNewPage() {
                 value={value}
                 onChange={handleRating}
                 style={{ fontSize: "50px" }}
+                className={style.starRating}
               />
             </Box>
           </div>
