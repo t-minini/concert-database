@@ -121,6 +121,7 @@ export function EditCardPage() {
 							className={style.pageTitle}
 							component='div'
 							sx={{ flexGrow: 1 }}
+							style={{ marginRight: '50px' }}
 						>
 							<strong>Edit Card</strong>
 						</Typography>
@@ -193,12 +194,13 @@ export function EditCardPage() {
 					className={style.editRating}
 				>
 					<div className={style.rating}>
-						<Typography style={{ fontSize: '22px' }} component='legend'>
+						<Typography style={{ fontSize: '25px' }} component='legend'>
 							Rating
 						</Typography>
 						<Rating
 							name='rating'
 							style={{ fontSize: '50px' }}
+							className={style.starRating}
 							precision={1}
 							value={Number(form.rating)}
 							onChange={handleRating}
@@ -212,6 +214,7 @@ export function EditCardPage() {
 						size='medium'
 						variant='contained'
 						color='success'
+						className={style.btnStyle}
 					>
 						SAVE CHANGES
 					</Button>
@@ -221,6 +224,7 @@ export function EditCardPage() {
 						color='error'
 						startIcon={<DeleteIcon />}
 						onClick={handleDelete}
+						className={style.btnStyle}
 					>
 						DELETE CARD
 					</Button>
