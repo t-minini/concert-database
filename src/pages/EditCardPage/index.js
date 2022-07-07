@@ -136,7 +136,7 @@ export function EditCardPage() {
 					name='concert'
 					value={form.concert}
 					onChange={handleChange}
-					style={{ marginTop: '10px' }}
+					style={{ marginTop: '20px' }}
 				/>
 				<TextField
 					className={style.editInput}
@@ -147,7 +147,7 @@ export function EditCardPage() {
 					value={form.artist}
 					onChange={handleChange}
 				/>
-				<FormControl className={style.formControl}>
+				<FormControl>
 					<InputLabel id='demo-simple-select-label'>Ateendee</InputLabel>
 					<Select
 						className={style.formControl}
@@ -178,6 +178,7 @@ export function EditCardPage() {
 				/>
 				<TextField
 					className={style.editInput}
+					style={{ marginTop: '15px' }}
 					id='city'
 					label='City'
 					variant='outlined'
@@ -189,6 +190,7 @@ export function EditCardPage() {
 					sx={{
 						'& > legend': { mt: 2 },
 					}}
+					className={style.editRating}
 				>
 					<div className={style.rating}>
 						<Typography style={{ fontSize: '22px' }} component='legend'>
@@ -196,7 +198,7 @@ export function EditCardPage() {
 						</Typography>
 						<Rating
 							name='rating'
-							style={{ fontSize: '30px' }}
+							style={{ fontSize: '50px' }}
 							precision={1}
 							value={Number(form.rating)}
 							onChange={handleRating}
