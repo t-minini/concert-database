@@ -101,7 +101,7 @@ export function EditCardPage() {
 	}
 
 	return (
-		<>
+		<div className={style.general}>
 			<Box sx={{ flexGrow: 1 }}>
 				<AppBar position='static'>
 					<Toolbar>
@@ -128,6 +128,25 @@ export function EditCardPage() {
 				</AppBar>
 			</Box>
 			<form onSubmit={handleSubmit} className={style.editForm}>
+				<TextField
+					className={style.editInput}
+					id='concert-tour'
+					label='Concert/Tour'
+					variant='outlined'
+					name='concert'
+					value={form.concert}
+					onChange={handleChange}
+					style={{ marginTop: '10px' }}
+				/>
+				<TextField
+					className={style.editInput}
+					id='artist'
+					label='Artist'
+					variant='outlined'
+					name='artist'
+					value={form.artist}
+					onChange={handleChange}
+				/>
 				<FormControl className={style.formControl}>
 					<InputLabel id='demo-simple-select-label'>Ateendee</InputLabel>
 					<Select
@@ -143,25 +162,6 @@ export function EditCardPage() {
 						<MenuItem value={'Lucas Colombo'}>Lucas Colombo</MenuItem>
 					</Select>
 				</FormControl>
-
-				<TextField
-					className={style.editInput}
-					id='concert-tour'
-					label='Concert/Tour'
-					variant='outlined'
-					name='concert'
-					value={form.concert}
-					onChange={handleChange}
-				/>
-				<TextField
-					className={style.editInput}
-					id='artist'
-					label='Artist'
-					variant='outlined'
-					name='artist'
-					value={form.artist}
-					onChange={handleChange}
-				/>
 				<TextField
 					className={style.editInput}
 					id='date'
@@ -224,6 +224,6 @@ export function EditCardPage() {
 					</Button>
 				</div>
 			</form>
-		</>
+		</div>
 	);
 }
