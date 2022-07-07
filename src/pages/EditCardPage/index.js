@@ -90,7 +90,7 @@ export function EditCardPage() {
 
 	async function handleDelete() {
 		try {
-			await axios.delete(
+			const response = await axios.delete(
 				`https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
 			);
 			// console.log(response._id);
