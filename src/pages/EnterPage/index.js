@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import style from "./EnterPage.module.css";
-import backgroundImg from "../../images/crowd-background-1.avif";
+import backgroundImg2 from "../../images/crowd-background-2.avif";
 
 // MATERIAL UI COMPONENTS
-import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -12,7 +11,7 @@ export function EnterPage() {
     <>
       <div
         className={style.general}
-        style={{ backgroundImage: `url(${backgroundImg})` }}
+        style={{ backgroundImage: `url(${backgroundImg2})` }}
       >
         <div className={style.enterPage}>
           <h1 className={style.h1}>Concert's</h1>
