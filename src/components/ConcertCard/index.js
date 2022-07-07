@@ -43,64 +43,61 @@ export function ConcertCard() {
       >
         {concerts.map((currentConcert) => {
           return (
-            <>
-              <Grid item xs={12} sm={6}>
-                <Card
-                  sx={{ minWidth: 275 }}
-                  style={{ backgroundColor: "#D7D9D8" }}
-                  key={currentConcert._id}
-                  className={style.mainCard}
-                >
-                  <CardContent className={style.cardContent}>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                      className={style.cardHeader}
-                    >
-                      {currentConcert.concert}
-                      <Rating
-                        name="read-only"
-                        value={Number(currentConcert.rating) || ""}
-                        readOnly
-                      />
-                    </Typography>
+            <Grid item xs={12} sm={6} key={currentConcert._id}>
+              <Card
+                sx={{ minWidth: 275 }}
+                style={{ backgroundColor: "#D7D9D8" }}
+                className={style.mainCard}
+              >
+                <CardContent className={style.cardContent}>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                    className={style.cardHeader}
+                  >
+                    {currentConcert.concert}
+                    <Rating
+                      name="read-only"
+                      value={Number(currentConcert.rating) || ""}
+                      readOnly
+                    />
+                  </Typography>
 
-                    <Typography
-                      sx={{ mb: 1.5 }}
-                      color="text.secondary"
-                      className={style.artist}
-                    >
-                      {currentConcert.artist}
+                  <Typography
+                    sx={{ mb: 1.5 }}
+                    color="text.secondary"
+                    className={style.artist}
+                  >
+                    {currentConcert.artist}
+                  </Typography>
+                  <div className={style.cardInfo}>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      {currentConcert.owner}
                     </Typography>
-                    <div className={style.cardInfo}>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      {currentConcert.date}
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      {currentConcert.country}
+                    </Typography>
+                    <div className={style.cardActions}>
                       <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {currentConcert.owner}
+                        {currentConcert.city}
                       </Typography>
-                      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {currentConcert.date}
-                      </Typography>
-                      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {currentConcert.country}
-                      </Typography>
-                      <div className={style.cardActions}>
-                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                          {currentConcert.city}
-                        </Typography>
-                        <Link
-                          to={`/edit/${currentConcert._id}`}
-                          style={{ textDecoration: "none" }}
-                        >
-                          <Button size="medium" variant="outlined">
-                            EDIT
-                          </Button>
-                        </Link>
-                      </div>
+                      <Link
+                        to={`/edit/${currentConcert._id}`}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Button size="medium" variant="outlined">
+                          EDIT
+                        </Button>
+                      </Link>
                     </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </>
+                  </div>
+                </CardContent>
+              </Card>
+            </Grid>
           );
         })}
       </Stack>
