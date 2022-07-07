@@ -22,7 +22,7 @@ export function EnterPage() {
         </div>
         <div className={style.createdBy}>
           <div>
-            <h2>CREATED BY</h2>
+            <h2>DEVELOPED BY</h2>
           </div>
           <div className={style.namesGroup}>
             <div className={style.names}>
