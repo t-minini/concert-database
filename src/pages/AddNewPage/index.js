@@ -97,14 +97,27 @@ export function AddNewPage() {
         style={{ backgroundColor: "white", marginTop: "10px" }}
         onSubmit={handleSubmit}
       >
-        <div>
+        <div className={style.concert}>
           <TextField
+            // id={style.concert}
+            style={{ maginTop: "100px" }}
             className={style.textField}
             id="concert-tour"
             label="Concert/Tour"
             variant="outlined"
             name="concert"
             value={form.concert}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <TextField
+            className={style.textField}
+            id="artist"
+            label="Artist"
+            variant="outlined"
+            name="artist"
+            value={form.artist}
             onChange={handleChange}
           />
         </div>
@@ -127,17 +140,6 @@ export function AddNewPage() {
         <div>
           <TextField
             className={style.textField}
-            id="artist"
-            label="Artist"
-            variant="outlined"
-            name="artist"
-            value={form.artist}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <TextField
-            className={style.textField}
             id="date"
             label="Date"
             variant="outlined"
@@ -148,6 +150,7 @@ export function AddNewPage() {
         </div>
         <div className={style.textField}>
           <CountrySelect
+            // style={{ marginBottom: "-10px" }}
             country={country}
             handleCountry={handleCountry}
             name="country"
@@ -164,34 +167,36 @@ export function AddNewPage() {
             onChange={handleChange}
           />
         </div>
-        <div className={style.textField}>
-          <Box
-            sx={{
-              "& > legend": { mt: 2 },
-            }}
-          >
-            <Typography component="legend" style={{ fontSize: "22px" }}>
-              Rating
-            </Typography>
-            <Rating
-              name="rating"
-              defaultValue={3}
-              precision={1}
-              value={value}
-              onChange={handleRating}
-              style={{ fontSize: "30px" }}
-            />
-          </Box>
-        </div>
-        <div>
-          <Button
-            className={style.textField}
-            style={{ width: "146px" }}
-            variant="contained"
-            type="submit"
-          >
-            Submit
-          </Button>
+        <div className={style.rateBox}>
+          <div className={style.textField}>
+            <Box
+              sx={{
+                "& > legend": { mt: 2 },
+              }}
+            >
+              <Typography component="legend" style={{ fontSize: "22px" }}>
+                Rating
+              </Typography>
+              <Rating
+                name="rating"
+                defaultValue={3}
+                precision={1}
+                value={value}
+                onChange={handleRating}
+                style={{ fontSize: "50px" }}
+              />
+            </Box>
+          </div>
+          <div>
+            <Button
+              className={style.textField}
+              style={{ width: "146px" }}
+              variant="contained"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </div>
         </div>
       </form>
     </div>
