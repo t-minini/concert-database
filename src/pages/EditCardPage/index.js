@@ -45,7 +45,7 @@ export function EditCardPage() {
 				const response = await axios.get(
 					`https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
 				);
-				console.log(response);
+				// console.log(response);
 				setForm(response.data);
 			} catch (error) {
 				console.log(error);
@@ -90,10 +90,10 @@ export function EditCardPage() {
 
 	async function handleDelete() {
 		try {
-			const response = await axios.delete(
+			await axios.delete(
 				`https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
 			);
-			console.log(response._id);
+			// console.log(response._id);
 			navigate('/home');
 		} catch (error) {
 			console.log(error);
@@ -116,8 +116,13 @@ export function EditCardPage() {
 								<HomeIcon sx={{ fontSize: 30, color: '#ffffff' }}></HomeIcon>
 							</Link>
 						</IconButton>
-						<Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-							<strong>Edit</strong>
+						<Typography
+							variant='h6'
+							className={style.pageTitle}
+							component='div'
+							sx={{ flexGrow: 1 }}
+						>
+							<strong>Edit Card</strong>
 						</Typography>
 					</Toolbar>
 				</AppBar>
@@ -193,7 +198,7 @@ export function EditCardPage() {
 							name='rating'
 							style={{ fontSize: '30px' }}
 							precision={1}
-							value={form.rating}
+							value={Number(form.rating)}
 							onChange={handleRating}
 						/>
 					</div>
