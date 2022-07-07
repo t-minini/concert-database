@@ -1,36 +1,37 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import style from "./ConcertCard.module.css";
+import * as React from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import style from './ConcertCard.module.css';
 
 // MATERIAL UI COMPONENTS
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
-import { Grid } from "@mui/material";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+import { Grid } from '@mui/material';
 
 export function ConcertCard() {
-  const [concerts, setConcerts] = useState([]);
-  console.log(concerts);
+	const [concerts, setConcerts] = useState([]);
+	console.log(concerts);
 
-  useEffect(() => {
-    async function fetchConcerts() {
-      try {
-        const response = await axios.get(
-          "https://ironrest.herokuapp.com/project-two-tulio-lucas"
-        );
-        console.log(response);
-        setConcerts(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchConcerts();
-  }, []);
+	useEffect(() => {
+		async function fetchConcerts() {
+			try {
+				const response = await axios.get(
+					'https://ironrest.herokuapp.com/project-two-tulio-lucas'
+				);
+				console.log(response);
+				setConcerts(response.data);
+			} catch (error) {
+				console.log(error);
+			}
+		}
+		fetchConcerts();
+	}, []);
+
 
   return (
     <div>
