@@ -103,7 +103,7 @@ export function EditCardPage() {
 	return (
 		<div className={style.general}>
 			<Box sx={{ flexGrow: 1 }}>
-				<AppBar position='static'>
+				<AppBar position='static' style={{ backgroundColor: '#E66A12' }}>
 					<Toolbar>
 						<IconButton
 							size='large'
