@@ -108,7 +108,7 @@ export function ConcertCard() {
 											>
 												<Button
 													size='small'
-													variant='outlined'
+													variant='contained'
 													className={style.editBtn}
 												>
 													EDIT
