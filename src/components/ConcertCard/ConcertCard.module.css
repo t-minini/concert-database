@@ -1,174 +1,174 @@
 .mainCard {
-  margin: 10px;
-  height: 190px;
-  width: 530px;
-  background-image: url(../../images/normal-screen.png);
-  background-size: 590px;
+	margin: 10px;
+	height: 190px;
+	width: 530px;
+	background-image: url(../../images/normal-screen.png);
+	background-size: 590px;
 }
 
 .cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold !important;
-  font-size: 1.6rem !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold !important;
+	font-size: 1.6rem !important;
 }
 
 .cardContent {
-  padding-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 .artist {
-  font-size: 1.1rem !important;
-  font-weight: bolder !important;
-  margin-top: -15px !important;
+	font-size: 1.1rem !important;
+	font-weight: bolder !important;
+	margin-top: -15px !important;
 }
 
 .cardInfo {
-  text-align: center;
-  font-size: 0.01rem;
-  font-weight: bolder;
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-  left: 176px;
-  top: 28px;
+	text-align: center;
+	font-size: 0.01rem;
+	font-weight: bolder;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	left: 176px;
+	top: 28px;
 }
 .cardInfoText {
-  font-size: 18px !important;
-  font-weight: 600 !important;
+	font-size: 18px !important;
+	font-weight: 600 !important;
 }
 
 .cardActions {
-  width: 180px !important;
-  text-align: center;
-  width: 130px;
-  position: relative;
-  bottom: 105px;
-  left: 336px;
+	width: 180px !important;
+	text-align: center;
+	width: 130px;
+	position: relative;
+	bottom: 105px;
+	left: 336px;
 }
 .rating {
-  position: relative;
-  top: 45px;
-  right: 425px;
+	position: relative;
+	top: 45px;
+	right: 425px;
 }
 .editBtnLink {
-  position: relative;
-  bottom: 34px;
-  left: 259px;
+	position: relative;
+	bottom: 34px;
+	left: 259px;
 }
 
 .editBtn {
-  background-color: #424242 !important;
+	background-color: #424242 !important;
 }
 
 @media only screen and (max-width: 820px) {
-  .mainCard {
-    height: 150px;
-    width: 380px;
-    background-image: url(../../images/ipad.png);
-    background-size: 510px;
-  }
-  .cardHeader {
-    font-size: 1.1rem !important;
-  }
-  .artist {
-    font-size: 0.9rem !important;
-    margin-top: -11px !important;
-    position: relative;
-    bottom: 2px;
-    right: 0px;
-  }
-  .editBtnLink {
-    position: relative;
-    bottom: 30px;
-    left: 145px;
-  }
-  .editBtn {
-    height: 20px !important;
-    font-size: 12px !important;
-  }
-  .rating {
-    font-size: 13px !important;
-    position: relative;
-    top: 33px;
-    right: 285px;
-  }
-  .cardInfo {
-    font-size: 1px !important;
-    position: relative;
-    left: 120px;
-    top: 20px;
-  }
-  .cardInfoText {
-    font-size: 15px !important;
-    font-weight: 600 !important;
-  }
+	.mainCard {
+		height: 150px;
+		width: 380px;
+		background-image: url(../../images/ipad.png);
+		background-size: 510px;
+	}
+	.cardHeader {
+		font-size: 1.1rem !important;
+	}
+	.artist {
+		font-size: 0.9rem !important;
+		margin-top: -11px !important;
+		position: relative;
+		bottom: 2px;
+		right: 0px;
+	}
+	.editBtnLink {
+		position: relative;
+		bottom: 30px;
+		left: 145px;
+	}
+	.editBtn {
+		height: 20px !important;
+		font-size: 12px !important;
+	}
+	.rating {
+		font-size: 13px !important;
+		position: relative;
+		top: 33px;
+		right: 285px;
+	}
+	.cardInfo {
+		font-size: 1px !important;
+		position: relative;
+		left: 120px;
+		top: 20px;
+	}
+	.cardInfoText {
+		font-size: 15px !important;
+		font-weight: 600 !important;
+	}
 
-  .cardActions {
-    text-align: center;
-    position: relative;
-    bottom: 90px;
-    left: 229px;
-  }
-  .cardActionsText {
-    font-size: 12px !important;
-    font-weight: 540 !important;
-  }
+	.cardActions {
+		text-align: center;
+		position: relative;
+		bottom: 90px;
+		left: 229px;
+	}
+	.cardActionsText {
+		font-size: 12px !important;
+		font-weight: 540 !important;
+	}
 }
 
 @media only screen and (max-width: 440px) {
-  .mainCard {
-    height: 140px;
-    width: 350px !important;
-    background-image: url(../../images/ticket-iphone.png);
-    background-size: 460px;
-  }
-  .cardHeader {
-    font-size: 1rem !important;
-    position: relative;
-    bottom: 5px;
-    right: 5px;
-  }
-  .artist {
-    font-size: 0.9rem !important;
-    margin-top: -11px !important;
-    position: relative;
-    bottom: 5px;
-    right: 5px;
-  }
-  .rating {
-    font-size: 13px !important;
-    position: relative;
-    top: 31px;
-    right: 255px;
-  }
-  .editBtnLink {
-    position: relative;
-    bottom: 28px;
-    left: 122px;
-  }
-  .editBtn {
-    height: 20px !important;
-    font-size: 13px !important;
-  }
-  .cardInfo {
-    font-size: 1px !important;
-    position: relative;
-    left: 105px;
-    top: 15px;
-  }
-  .cardInfoText {
-    font-size: 13px !important;
-  }
+	.mainCard {
+		height: 140px;
+		width: 350px !important;
+		background-image: url(../../images/ticket-iphone.png);
+		background-size: 460px;
+	}
+	.cardHeader {
+		font-size: 1rem !important;
+		position: relative;
+		bottom: 5px;
+		right: 5px;
+	}
+	.artist {
+		font-size: 0.9rem !important;
+		margin-top: -11px !important;
+		position: relative;
+		bottom: 5px;
+		right: 5px;
+	}
+	.rating {
+		font-size: 13px !important;
+		position: relative;
+		top: 31px;
+		right: 255px;
+	}
+	.editBtnLink {
+		position: relative;
+		bottom: 28px;
+		left: 122px;
+	}
+	.editBtn {
+		height: 20px !important;
+		font-size: 13px !important;
+	}
+	.cardInfo {
+		font-size: 1px !important;
+		position: relative;
+		left: 105px;
+		top: 15px;
+	}
+	.cardInfoText {
+		font-size: 13px !important;
+	}
 
-  .cardActions {
-    text-align: center;
-    position: relative;
-    bottom: 83px;
-    left: 200px;
-  }
-  .cardActionsText {
-    font-size: 10px !important;
-  }
+	.cardActions {
+		text-align: center;
+		position: relative;
+		bottom: 83px;
+		left: 200px;
+	}
+	.cardActionsText {
+		font-size: 10px !important;
+	}
 }
