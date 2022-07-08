@@ -2,7 +2,7 @@
 
 ## **About the project**
 
-We came up with the idea of creating a personal Concert Database inspired by our passion for music and live concerts. The goal it’s to keep a track of the concerts we have been, with a few information as, Tour name, Artist, year and so on.
+For the Project #2 at Ironhack Web Development Bootcamp, we came up with the idea of creating a personal Concert Database inspired by our passion for music and live concerts. The goal it’s to keep a track of the concerts we have been, with a few information as, Tour name, Artist, year and so on.
 
 ## Tools Used
 
