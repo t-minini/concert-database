@@ -33,7 +33,7 @@ export function ConcertCard() {
   }, []);
 
   return (
-    <div>
+    <div className={style.cardsFlex}>
       <Stack
         direction="row"
         justifyContent="flex-start"
@@ -65,9 +65,11 @@ export function ConcertCard() {
                   >
                     {currentConcert.concert}
                     <Rating
+                      sx={{ fontSize: 15 }}
                       name="read-only"
                       value={Number(currentConcert.rating) || ""}
                       readOnly
+                      className={style.rating}
                     />
                   </Typography>
 
@@ -78,20 +80,25 @@ export function ConcertCard() {
                   >
                     {currentConcert.artist}
                   </Typography>
-                  <div className={style.cardInfo}>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                      {currentConcert.owner}
-                    </Typography>
-                    <div className={style.cardActions}>
-                      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {currentConcert.date} - {currentConcert.country},{" "}
-                        {currentConcert.city}
+                  <div>
+                    <div className={style.cardInfo}>
+                      <Typography sx={{ mb: 1.5 }} color="text.secondary" className={style.cardInfoText}>
+                        {currentConcert.owner}
                       </Typography>
+                    </div>
+                    <div className={style.cardActions}>
+                      <Typography sx={{ mb: 1.5 }} color="text.secondary" className={style.cardActionsText}>
+                        {currentConcert.date} <br />
+                        {currentConcert.country}, {currentConcert.city}
+                      </Typography>
+                    </div>
+                    <div>
                       <Link
+                        className={style.editBtnLink}
                         to={`/edit/${currentConcert._id}`}
                         style={{ textDecoration: "none" }}
                       >
-                        <Button size="medium" variant="outlined">
+                        <Button size="small" variant="outlined" className={style.editBtn}>
                           EDIT
                         </Button>
                       </Link>
