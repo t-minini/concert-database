@@ -1,89 +1,95 @@
 .general {
-	height: 740px;
-	width: 1110px;
-	text-align: center;
-	margin: auto;
+  height: 740px;
+  width: 1110px;
+  text-align: center;
+  margin: auto;
 }
 
 .form {
-	height: 641px;
-	border-radius: 4px;
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
+  height: 641px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .textField {
-	margin-bottom: 10px !important;
-	margin-left: auto;
-	margin-right: auto;
-	width: 900px;
+  margin-bottom: 10px !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
 }
 .country {
-	width: 900px;
-	margin-left: 200px;
+  width: 900px;
+  margin-left: 200px;
 }
 
 .concert {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 .rateBox {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
 @media only screen and (max-width: 820px) {
-	.general {
-		height: 1170px;
-		width: 100%;
-		text-align: center;
-		margin: auto;
-	}
+  .general {
+    height: 1170px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
 
-	.form {
-		height: 1070px;
-		border-radius: 4px;
-		display: flex;
-		flex-direction: column;
-		padding: 10px;
-	}
+  .form {
+    height: 1070px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
 
-	.textField {
-		margin-bottom: 30px !important;
-		margin-left: auto;
-		margin-right: auto;
-		width: 700px;
-	}
+  .textField {
+    margin-bottom: 30px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+  }
 
-	.country {
-		width: 700px;
-	}
+  .country {
+    width: 700px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-	.general {
-		height: 825px;
-		width: 100%;
-		text-align: center;
-		margin: auto;
-	}
-	.form {
-		height: 735px;
-		border-radius: 4px;
-		display: flex;
-		flex-direction: column;
-		padding: 10px;
-	}
-	.textField {
-		margin-bottom: 30px !important;
-		margin-left: auto;
-		margin-right: auto;
-		width: 350px;
-	}
-	.starRating {
-		font-size: 40px !important;
-	}
-	.rateBox {
-		position: relative;
-		bottom: 30px;
-	}
+  .general {
+    height: 825px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .form {
+    height: 735px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .textField {
+    margin-bottom: 30px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+  }
+
+  .atendee {
+    position: relative;
+	right: 10px;
+
+  }
+  .starRating {
+    font-size: 40px !important;
+  }
+  .rateBox {
+    position: relative;
+    bottom: 30px;
+  }
 }

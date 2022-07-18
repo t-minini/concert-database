@@ -128,7 +128,7 @@ export function AddNewPage() {
 				</div>
 				<div>
 					<FormControl className={style.textField}>
-						<InputLabel id='demo-simple-select-label'>Ateendee</InputLabel>
+						<InputLabel id='demo-simple-select-label' >Ateendee</InputLabel>
 						<Select
 							labelId='demo-simple-select-label'
 							id='demo-simple-select'
@@ -137,7 +137,7 @@ export function AddNewPage() {
 							label='Ateendee'
 							onChange={handleChange}
 						>
-							<MenuItem value={'Tulio Minini'}>Tulio Minini</MenuItem>
+							<MenuItem value={'Tulio Minini'} className={style.atendee} >Tulio Minini</MenuItem>
 							<MenuItem value={'Lucas Colombo'}>Lucas Colombo</MenuItem>
 						</Select>
 					</FormControl>
