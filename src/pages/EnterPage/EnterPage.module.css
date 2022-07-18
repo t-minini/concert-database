@@ -124,6 +124,7 @@ body {
   .general {
     height: 827px;
     width: 100%;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-size: 700px;
     display: flex;
