@@ -131,8 +131,9 @@ export function AddNewPage() {
 							value={form.owner}
 							label='Ateendee'
 							onChange={handleChange}
+							className={style.atendee}
 						>
-							<MenuItem value={'Tulio Minini'} className={style.atendee} >Tulio Minini</MenuItem>
+							<MenuItem value={'Tulio Minini'}>Tulio Minini</MenuItem>
 							<MenuItem value={'Lucas Colombo'}>Lucas Colombo</MenuItem>
 						</Select>
 					</FormControl>
