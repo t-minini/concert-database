@@ -2,21 +2,16 @@
 	width: 1110px;
 	margin: auto;
 }
-
 .nav {
 	margin-bottom: 10px !important;
-	/* background-color: rgb(230, 155, 16); */
 }
-
 .homeBar {
 	display: flex;
 	justify-content: center;
 }
-
 .cards {
 	display: flex;
 }
-
 .scroll {
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -26,7 +21,6 @@
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 }
-
 .btn {
 	height: 56px;
 	background-color: white;
@@ -37,7 +31,6 @@
 	align-items: center;
 	justify-content: center;
 }
-
 @media only screen and (max-width: 950px) {
 	.general {
 		width: 100%;
@@ -47,9 +40,16 @@
 		height: 1035px;
 	}
 }
-
 @media only screen and (max-width: 440px) {
 	.scroll {
 		height: 704px;
+	}
+	.cards {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		flex-direction: column !important;
+		background-color: black !important;
+		
 	}
 }

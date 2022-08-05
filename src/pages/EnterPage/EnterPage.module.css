@@ -88,7 +88,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-
   .h1 {
     font-family: "The Nautigal", cursive;
     font-size: 280px;
@@ -110,7 +109,6 @@ body {
     margin-bottom: 170px;
     font-size: 60px;
   }
-
   .createdBy h2 {
     letter-spacing: 2px;
     font-size: 14px;
