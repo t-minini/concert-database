@@ -29,10 +29,10 @@ export function AddNewPage() {
 		date: '',
 		country: '',
 		city: '',
-		rating: 3,
+		rating: '',
 	});
 
-	const [value, setValue] = useState(3);
+	const [value, setValue] = useState();
 
 	const [country, setCountry] = useState({ label: '' });
 
@@ -65,10 +65,6 @@ export function AddNewPage() {
 			console.log(error);
 		}
 	}
-
-	// console.log(value);
-	// console.log(country);
-	// console.log(form);
 
 	return (
 		<div className={style.general}>
@@ -104,7 +100,6 @@ export function AddNewPage() {
 			>
 				<div className={style.concert}>
 					<TextField
-						// id={style.concert}
 						style={{ maginTop: '100px' }}
 						className={style.textField}
 						id='concert-tour'
@@ -183,7 +178,7 @@ export function AddNewPage() {
 							</Typography>
 							<Rating
 								name='rating'
-								defaultValue={3}
+								defaultValue={1}
 								precision={1}
 								value={value}
 								onChange={handleRating}
