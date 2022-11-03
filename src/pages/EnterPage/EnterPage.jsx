@@ -12,7 +12,7 @@ export function EnterPage() {
         <h1>Concerts</h1>
         <h2>DATABASE</h2>
         <Link to={"/home"} style={{ textDecoration: "none" }}>
-          <p>ENTER</p>
+          <button>ENTER</button>
         </Link>
       </div>
       <div className={style.createdBy}>
