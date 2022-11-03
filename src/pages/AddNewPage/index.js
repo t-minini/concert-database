@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { CountrySelect } from '../../components/CountrySelect';
+// import { CountrySelect } from '../../components/CountrySelect';
 import style from './AddNewPage.module.css';
 
 // MATERIAL UI COMPONENTS
@@ -34,19 +34,19 @@ export function AddNewPage() {
 
 	const [value, setValue] = useState();
 
-	const [country, setCountry] = useState({ label: '' });
+	// const [country, setCountry] = useState({ label: '' });
 
 	function handleChange(event) {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	}
 
-	function handleCountry(event, newValue) {
-		setCountry(newValue);
-	}
+	// function handleCountry(event, newValue) {
+	// 	setCountry(newValue);
+	// }
 
-	useEffect(() => {
-		setForm({ ...form, country: country.label });
-	}, [country]);
+	// useEffect(() => {
+	// 	setForm({ ...form, country: country.label });
+	// }, [country]);
 
 	function handleRating(event, newValue) {
 		setValue(newValue);
@@ -149,13 +149,13 @@ export function AddNewPage() {
 						onChange={handleChange}
 					/>
 				</div>
-				<div className={style.textField}>
+				{/* <div className={style.textField}>
 					<CountrySelect
 						country={country}
 						handleCountry={handleCountry}
 						name='country'
 					/>
-				</div>
+				</div> */}
 				<div>
 					<TextField
 						className={style.textField}

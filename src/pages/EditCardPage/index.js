@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CountrySelect } from '../../components/CountrySelect';
+// import { CountrySelect } from '../../components/CountrySelect';
 import { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import style from './style.module.css';
@@ -25,7 +25,7 @@ export function EditCardPage() {
 
 	const [value, setValue] = useState();
 
-	const [country, setCountry] = useState({ label: '' });
+	// const [country, setCountry] = useState({ label: '' });
 
 	const { id } = useParams();
 
@@ -55,17 +55,17 @@ export function EditCardPage() {
 		fetchConcerts(id);
 	}, [id]);
 
-	useEffect(() => {
-		setForm({ ...form, country: country.label });
-	}, [country]);
+	// useEffect(() => {
+	// 	setForm({ ...form, country: country.label });
+	// }, [country]);
 
 	function handleChange(event) {
 		setForm({ ...form, [event.target.name]: event.target.value });
 	}
 
-	function handleCountry(event, newValue) {
-		setCountry(newValue);
-	}
+	// function handleCountry(event, newValue) {
+	// 	setCountry(newValue);
+	// }
 
 	function handleRating(event, newValue) {
 		setValue(newValue);
@@ -93,7 +93,7 @@ export function EditCardPage() {
 			const response = await axios.delete(
 				`https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
 			);
-			// console.log(response._id);
+			console.log(response._id);
 			navigate('/home');
 		} catch (error) {
 			console.log(error);
@@ -172,11 +172,11 @@ export function EditCardPage() {
 					value={form.date}
 					onChange={handleChange}
 				/>
-				<CountrySelect
+				{/* <CountrySelect
 					country={country}
 					handleCountry={handleCountry}
 					name='country'
-				/>
+				/> */}
 				<TextField
 					className={style.editInput}
 					style={{ marginTop: '15px' }}
