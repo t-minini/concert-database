@@ -1,12 +1,10 @@
-# Project #2: React Application <br>Concert’s Database
+# Concert’s Database
 
 ## About the project 💭
 
-For Project #2 at Ironhack Web Development Bootcamp, we came up with the idea of creating a personal Concert Database inspired by our passion for music and live concerts. The goal’s to keep track of the shows we have been to, with a few information such as Tour name, Artist, year and so on.
+The idea is of creating a personal Concert Database inspired by my passion for music and live concerts. The goal’s to keep track of the shows I have been to, with a few information such as Tour name, Artist, year and rate.
 
-## Netlify Deploy 📝
-
-You can find the app deploy [here!](https://concert-database.netlify.app/)
+You can visit the website [here!](https://concert-database.netlify.app/)
 
 ## Tools Used 🛠
 
