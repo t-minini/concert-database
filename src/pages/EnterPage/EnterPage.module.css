@@ -1,5 +1,5 @@
 .general {
-  background-image: url("./../../images/crowd-background-2.avif");
+  background-image: url("./../../images/crowd-background-1.avif");
   height: 93vh;
   max-width: 80vw;
   padding: 20px 0;
@@ -7,6 +7,7 @@
   margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position:center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
