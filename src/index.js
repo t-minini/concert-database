@@ -1,28 +1,22 @@
-import React from "react";
-// import ReactDOM from "react-dom/client";
 import App from "./App";
+import React from "react";
+import "./index.css"
+import { hydrate, render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import { hydrate, render } from "react-dom";
-
-const APP = (
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const APP = () => {
+  return (
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+};
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(APP, rootElement);
+  hydrate(<APP />, rootElement);
 } else {
-  render(APP, rootElement);
+  render(<APP />, rootElement);
 }
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render();
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

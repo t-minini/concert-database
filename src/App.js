@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/HomePage';
 import { AddNewPage } from './pages/AddNewPage';
 import { EditCardPage } from './pages/EditCardPage';
-import { EnterPage } from './pages/EnterPage';
+import { EnterPage } from './pages/EnterPage/EnterPage';
 
 function App() {
 	return (
