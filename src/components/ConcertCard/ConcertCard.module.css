@@ -1,174 +1,118 @@
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .mainCard {
-	margin: 10px;
-	height: 190px;
-	width: 530px;
-	background-image: url(../../images/normal-screen.png);
-	background-size: 590px;
+  margin: 10px;
+  height: 190px;
+  width: 530px;
+  background-image: url(../../images/normal-screen.png);
+  background-size: 590px;
 }
 
-.cardHeader {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-weight: bold !important;
-	font-size: 1.6rem !important;
+.tourText {
+  display: flex;
+  width: max-content;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem !important;
 }
 
-.cardContent {
-	padding-bottom: 0px;
+.artistText {
+  font-size: 1.1rem !important;
+  font-weight: bolder !important;
+  margin-top: -10px !important;
 }
 
-.artist {
-	font-size: 1.1rem !important;
-	font-weight: bolder !important;
-	margin-top: -15px !important;
+.cardOwner {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  left: 176px;
+  top: 24px;
 }
 
-.cardInfo {
-	text-align: center;
-	font-size: 0.01rem;
-	font-weight: bolder;
-	position: relative;
-	padding: 0px;
-	margin: 0px;
-	left: 176px;
-	top: 28px;
-}
-.cardInfoText {
-	font-size: 18px !important;
-	font-weight: 600 !important;
+.cardDateCountry {
+  width: 180px;
+  text-align: center;
+  position: relative;
+  bottom: 95px;
+  left: 336px;
 }
 
-.cardActions {
-	width: 180px !important;
-	text-align: center;
-	width: 130px;
-	position: relative;
-	bottom: 105px;
-	left: 336px;
-}
-.rating {
-	position: relative;
-	top: 45px;
-	right: 425px;
-}
 .editBtnLink {
-	position: relative;
-	bottom: 34px;
-	left: 259px;
+  position: relative;
+  bottom: 13px;
+  left: 258px;
 }
 
-.editBtn {
-	background-color: #424242 !important;
+/* iPad Air 820 x 1180  */
+
+@media (max-width: 820px) {
+  .mainCard {
+    height: 150px;
+    width: 380px;
+    background-image: url(../../images/ipad.png);
+    background-size: 510px;
+  }
+
+  .tourText {
+    font-size: 1rem !important;
+  }
+
+  .artistText {
+    font-size: 0.9rem !important;
+  }
+
+  .cardOwner {
+    left: 120px;
+    top: 10px;
+  }
+
+  .cardDateCountry {
+    font-size: 0.8rem !important;
+    bottom: 90px;
+    left: 205px;
+  }
+
+  .editBtnLink {
+    bottom: 25px;
+    left: 145px;
+  }
 }
 
-@media only screen and (max-width: 820px) {
-	.mainCard {
-		height: 150px;
-		width: 380px;
-		background-image: url(../../images/ipad.png);
-		background-size: 510px;
-	}
-	.cardHeader {
-		font-size: 1.1rem !important;
-	}
-	.artist {
-		font-size: 0.9rem !important;
-		margin-top: -11px !important;
-		position: relative;
-		bottom: 2px;
-		right: 0px;
-	}
-	.editBtnLink {
-		position: relative;
-		bottom: 30px;
-		left: 145px;
-	}
-	.editBtn {
-		height: 20px !important;
-		font-size: 12px !important;
-	}
-	.rating {
-		font-size: 13px !important;
-		position: relative;
-		top: 33px;
-		right: 285px;
-	}
-	.cardInfo {
-		font-size: 1px !important;
-		position: relative;
-		left: 120px;
-		top: 20px;
-	}
-	.cardInfoText {
-		font-size: 15px !important;
-		font-weight: 600 !important;
-	}
+/* iPhone 11 Pro Max / XR 414 x 896  */
 
-	.cardActions {
-		text-align: center;
-		position: relative;
-		bottom: 90px;
-		left: 204px;
-	}
-	.cardActionsText {
-		font-size: 12px !important;
-		font-weight: 540 !important;
-	}
+@media (max-width: 414px) {
+  .mainCard {
+    height: 145px;
+    width: 350px !important;
+    /* background-image: url(../../images/ticket-iphone.png); */
+    background-size: 460px;
+  }
+  .cardOwner {
+    left: 105px;
+    top: 1px;
+  }
+  .cardDateCountry {
+    font-size: 0.8rem !important;
+    bottom: 95px;
+    left: 175px;
+  }
+
+  .editBtnLink {
+    bottom: 35px;
+    left: 120px;
+  }
+
 }
 
-@media only screen and (max-width: 440px) {
-	.mainCard {
-		height: 140px;
-		width: 350px !important;
-		background-image: url(../../images/ticket-iphone.png);
-		background-size: 460px;
-	}
-	.cardHeader {
-		font-size: 1rem !important;
-		position: relative;
-		bottom: 5px;
-		right: 5px;
-	}
-	.artist {
-		font-size: 0.9rem !important;
-		margin-top: -11px !important;
-		position: relative;
-		bottom: 5px;
-		right: 5px;
-	}
-	.rating {
-		font-size: 13px !important;
-		position: relative;
-		top: 31px;
-		right: 255px;
-	}
-	.editBtnLink {
-		position: relative;
-		bottom: 28px;
-		left: 122px;
-	}
-	.editBtn {
-		height: 20px !important;
-		font-size: 13px !important;
-	}
-	.cardInfo {
-		font-size: 1px !important;
-		position: relative;
-		left: 105px;
-		top: 15px;
-	}
-	.cardInfoText {
-		font-size: 13px !important;
-	}
+/* iPhone 12 Pro / 13 Pro 390 x 844  */
 
-	.cardActions {
-		text-align: center;
-		position: relative;
-		bottom: 83px;
-		left: 175px;
-	}
-	.cardActionsText {
-		font-size: 10px !important;
-	}
-}
+/* @media (max-width: 390px) {
+
+} */

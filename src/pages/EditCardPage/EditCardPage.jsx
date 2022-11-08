@@ -2,7 +2,7 @@ import axios from 'axios';
 // import { CountrySelect } from '../../components/CountrySelect';
 import { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import style from './style.module.css';
+import style from './EditCardPage.module.css';
 
 // MATERIAL UI COMPONENTS
 import Button from '@mui/material/Button';
@@ -141,6 +141,7 @@ export function EditCardPage() {
 				/>
 				<TextField
 					className={style.editInput}
+					style={{ marginTop: '10px' }}
 					id='artist'
 					label='Artist'
 					variant='outlined'
@@ -148,15 +149,16 @@ export function EditCardPage() {
 					value={form.artist}
 					onChange={handleChange}
 				/>
-				<FormControl>
-					<InputLabel id='demo-simple-select-label'>Ateendee</InputLabel>
+				<FormControl
+				style={{ marginTop: '10px' }}>
+					<InputLabel id='demo-simple-select-label'>Attendee</InputLabel>
 					<Select
 						className={style.formControl}
 						labelId='demo-simple-select-label'
 						id='demo-simple-select'
 						name='owner'
 						value={form.owner}
-						label='Ateendee'
+						label='Attendee'
 						onChange={handleChange}
 					>
 						<MenuItem value={'Tulio Minini'}>Tulio Minini</MenuItem>
@@ -165,6 +167,7 @@ export function EditCardPage() {
 				</FormControl>
 				<TextField
 					className={style.editInput}
+					style={{ marginTop: '10px' }}
 					id='date'
 					label='Date'
 					variant='outlined'
@@ -179,12 +182,22 @@ export function EditCardPage() {
 				/> */}
 				<TextField
 					className={style.editInput}
-					style={{ marginTop: '15px' }}
+					style={{ marginTop: '10px' }}
 					id='city'
 					label='City'
 					variant='outlined'
 					name='city'
 					value={form.city}
+					onChange={handleChange}
+				/>
+					<TextField
+					className={style.editInput}
+					style={{ marginTop: '10px' }}
+					id='country'
+					label='Country'
+					variant='outlined'
+					name='country'
+					value={form.country}
 					onChange={handleChange}
 				/>
 				<Box

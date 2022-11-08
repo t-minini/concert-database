@@ -123,18 +123,17 @@ export function AddNewPage() {
 				</div>
 				<div>
 					<FormControl className={style.textField}>
-						<InputLabel id='demo-simple-select-label' >Ateendee</InputLabel>
+						<InputLabel id='demo-simple-select-label' >Attendee</InputLabel>
 						<Select
 							labelId='demo-simple-select-label'
 							id='demo-simple-select'
 							name='owner'
 							value={form.owner}
-							label='Ateendee'
+							label='Attendee'
 							onChange={handleChange}
 							className={style.atendee}
 						>
 							<MenuItem value={'Tulio Minini'}>Tulio Minini</MenuItem>
-							<MenuItem value={'Lucas Colombo'}>Lucas Colombo</MenuItem>
 						</Select>
 					</FormControl>
 				</div>
@@ -164,6 +163,17 @@ export function AddNewPage() {
 						variant='outlined'
 						name='city'
 						value={form.city}
+						onChange={handleChange}
+					/>
+				</div>
+				<div>
+					<TextField
+						className={style.textField}
+						id='country'
+						label='Country'
+						variant='outlined'
+						name='country'
+						value={form.country}
 						onChange={handleChange}
 					/>
 				</div>
