@@ -16,11 +16,6 @@ export function HomePage() {
         <AppBar position="static" style={{ backgroundColor: "#E66A12" }}>
           <Toolbar>
             <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="home"
-              sx={{ mr: 2 }}
             >
               <Link to={"/"} style={{ textDecoration: "none" }}>
                 <ArrowBackIcon
