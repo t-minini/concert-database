@@ -3,7 +3,6 @@ import style from "./HomePage.module.css";
 import { ConcertCard } from "../../components/ConcertCard/ConcertCard";
 
 //Material UI
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,7 +13,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 export function HomePage() {
   return (
     <section className={style.general}>
-      <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" style={{ backgroundColor: "#E66A12" }}>
           <Toolbar>
             <IconButton
@@ -41,7 +39,6 @@ export function HomePage() {
             </Typography>
           </Toolbar>
         </AppBar>
-      </Box>
       <div>
         <div className={style.scroll}>
           <ConcertCard />
