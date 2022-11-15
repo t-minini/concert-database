@@ -16,7 +16,7 @@ export function EnterPage() {
         </Link>
       </div>
       <div className={style.createdBy}>
-        <h2>DEVELOPED BY</h2>
+        <h2>Developed By</h2>
         <div className={style.namesGroup}>
           <div className={style.names}>
             <h3>Tulio Minini</h3>

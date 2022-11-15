@@ -23,7 +23,6 @@ export function EditCardPage() {
   const navigate = useNavigate();
 
   const [value, setValue] = useState();
-  console.log(value);
 
   const { id } = useParams();
 

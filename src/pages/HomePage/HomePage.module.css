@@ -2,7 +2,6 @@
   max-width: 80vw;
   height: 93vh;
   margin: auto;
-  
 }
 
 .nav {
@@ -37,7 +36,7 @@
   }
 
   .scroll {
-    height: 1035px;
+    height: 89vh;
   }
 }
 
@@ -45,7 +44,7 @@
 
 @media (max-width: 414px) {
   .scroll {
-    height: 755px;
+    height: 86vh;
   }
 }
 
@@ -53,7 +52,6 @@
 
 @media (max-width: 390px) {
   .scroll {
-    height: 700px;
+    height: 85vh;
   }
-
 }

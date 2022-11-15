@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import style from "./HomePage.module.css";
 import { ConcertCard } from "../../components/ConcertCard/ConcertCard";
 
-//Material UI
+//MUI Components
 import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";

@@ -10,7 +10,7 @@
   margin: 10px;
   height: 190px;
   width: 530px;
-  background-image: url(../../images/normal-screen.png);
+  background-image: url(../../images/desktop-ticket.png);
   background-size: 590px;
 }
 
@@ -56,7 +56,7 @@
   .mainCard {
     height: 150px;
     width: 380px;
-    background-image: url(../../images/ipad.png);
+    background-image: url(../../images/ipad-ticket.png);
     background-size: 510px;
   }
 
@@ -91,13 +91,14 @@
   .mainCard {
     height: 145px;
     width: 350px !important;
-    /* background-image: url(../../images/ticket-iphone.png); */
     background-size: 460px;
   }
+
   .cardOwner {
     left: 105px;
     top: 1px;
   }
+  
   .cardDateCountry {
     font-size: 0.8rem !important;
     bottom: 95px;
@@ -108,11 +109,4 @@
     bottom: 35px;
     left: 120px;
   }
-
 }
-
-/* iPhone 12 Pro / 13 Pro 390 x 844  */
-
-/* @media (max-width: 390px) {
-
-} */

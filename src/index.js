@@ -1,6 +1,6 @@
+import "./index.css"
 import App from "./App";
 import React from "react";
-import "./index.css"
 import { hydrate, render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
