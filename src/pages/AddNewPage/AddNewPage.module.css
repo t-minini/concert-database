@@ -1,6 +1,6 @@
 .general {
+  max-width: 80vw;
   height: 100vh;
-  max-width: 70vw;
   text-align: center;
   margin: auto;
 }

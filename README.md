@@ -1,8 +1,8 @@
-# Concert’s Database
+# Concert Database
 
 ## About the project 💭
 
-The idea is creating a personal Concert Database inspired by my passion for music and live concerts. The goal’s to keep track of the shows I have been to, with a few information such as Tour name, Artist, year and rate.
+The idea is creating a personal database inspired by my passion for music and live concerts. The goal’s to keep track of the shows I have been to, with a few information such as tour name, artist, year and rate.
 
 You can visit the website [here!](https://concert-database.netlify.app/)
 
