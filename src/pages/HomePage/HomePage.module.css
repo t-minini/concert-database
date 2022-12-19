@@ -1,5 +1,5 @@
 .general {
-  max-width: 80vw;
+  max-width: 60vw;
   height: 93vh;
   margin: auto;
 }
@@ -26,6 +26,10 @@
   height: 55px;
   background-color: white;
   text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* iPad Air 820 x 1180  */

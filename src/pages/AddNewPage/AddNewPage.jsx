@@ -23,7 +23,7 @@ export function AddNewPage() {
 
   const [form, setForm] = useState({
     owner: "",
-    concert: "",
+    tour: "",
     artist: "",
     date: "",
     country: "",
@@ -46,7 +46,7 @@ export function AddNewPage() {
     event.preventDefault();
     try {
       await axios.post(
-        "https://ironrest.herokuapp.com/project-two-tulio-lucas",
+        "https://concerts-api.cyclic.app/concerts",
         form
       );
       navigate("/home");
@@ -85,7 +85,7 @@ export function AddNewPage() {
           label="Concert/Tour"
           variant="outlined"
           name="concert"
-          value={form.concert}
+          value={form.tour}
           onChange={handleChange}
         />
         <TextField
@@ -109,6 +109,7 @@ export function AddNewPage() {
             style={{ textAlign: "left" }}
           >
             <MenuItem value={"Tulio Minini"}>Tulio Minini</MenuItem>
+            <MenuItem value={"Lucas Colombo"}>Lucas Colombo</MenuItem>
           </Select>
         </FormControl>
         <TextField

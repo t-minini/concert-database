@@ -1,5 +1,5 @@
 .general {
-  max-width: 80vw;
+  max-width: 60vw;
   height: 100vh;
   text-align: center;
   margin: auto;
@@ -16,7 +16,7 @@
 .textField {
   margin-bottom: 10px !important;
   margin: auto !important;
-  width: 60%;
+  width: 70%;
 }
 
 /* iPad Air 820 x 1180  */

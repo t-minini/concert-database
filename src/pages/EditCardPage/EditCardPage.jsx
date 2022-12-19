@@ -28,7 +28,7 @@ export function EditCardPage() {
 
   const [form, setForm] = useState({
     owner: "",
-    concert: "",
+    tour: "",
     artist: "",
     date: "",
     country: "",
@@ -40,9 +40,9 @@ export function EditCardPage() {
     async function fetchConcerts() {
       try {
         const response = await axios.get(
-          `https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
+          `https://concerts-api.cyclic.app/concerts/${id}`
         );
-        // console.log(response);
+        console.log(response);
         setForm(response.data);
       } catch (error) {
         console.log(error);
@@ -68,7 +68,7 @@ export function EditCardPage() {
 
       delete clone._id;
       await axios.put(
-        `https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`,
+        `https://concerts-api.cyclic.app/concerts/${id}`,
         clone
       );
       navigate("/home");
@@ -80,7 +80,7 @@ export function EditCardPage() {
   async function handleDelete() {
     try {
       const response = await axios.delete(
-        `https://ironrest.herokuapp.com/project-two-tulio-lucas/${id}`
+        `https://concerts-api.cyclic.app/concerts/${id}`
       );
       console.log(response._id);
       navigate("/home");
@@ -105,7 +105,7 @@ export function EditCardPage() {
             sx={{ flexGrow: 1 }}
             style={{ marginRight: "50px" }}
           >
-            <strong>Edit Card</strong>
+            <strong>Edit Concert</strong>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -116,7 +116,7 @@ export function EditCardPage() {
           label="Concert/Tour"
           variant="outlined"
           name="concert"
-          value={form.concert}
+          value={form.tour}
           onChange={handleChange}
         />
         <TextField
@@ -142,6 +142,7 @@ export function EditCardPage() {
 			style={{ textAlign: "left" }}
           >
             <MenuItem value={"Tulio Minini"}>Tulio Minini</MenuItem>
+            <MenuItem value={"Lucas Colombo"}>Lucas Colombo</MenuItem>
           </Select>
         </FormControl>
         <TextField

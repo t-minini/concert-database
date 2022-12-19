@@ -20,7 +20,7 @@ export function ConcertCard() {
     async function fetchConcerts() {
       try {
         const response = await axios.get(
-          "https://ironrest.herokuapp.com/project-two-tulio-lucas"
+          "https://concerts-api.cyclic.app/concerts"
         );
         console.log(response);
         setConcerts(response.data);
@@ -42,7 +42,7 @@ export function ConcertCard() {
                 gutterBottom
                 className={style.tourText}
               >
-                {currentConcert.concert}
+                {currentConcert.tour}
 
               </Typography>
               <Typography
