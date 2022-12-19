@@ -84,7 +84,7 @@ export function AddNewPage() {
           id="concert-tour"
           label="Concert/Tour"
           variant="outlined"
-          name="concert"
+          name="tour"
           value={form.tour}
           onChange={handleChange}
         />
