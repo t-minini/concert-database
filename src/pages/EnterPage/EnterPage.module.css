@@ -1,7 +1,7 @@
 .general {
   background-image: url("./../../images/crowd-background-1.avif");
   height: 93vh;
-  max-width: 60vw;
+  max-width: 80vw;
   padding: 20px 0;
   text-align: center;
   margin: auto;
@@ -67,6 +67,13 @@
   font-size: 1.25rem;
   letter-spacing: 2px;
   margin: 15px 0px 0px 0px;
+}
+
+@media (min-width: 1920px) {
+  .general {
+    max-width: 60vw;
+  }
+
 }
 
 /* iPad Air 820 x 1180  */

@@ -1,5 +1,5 @@
 .general {
-  max-width: 60vw;
+  max-width: 80vw;
   height: 93vh;
   margin: auto;
 }
@@ -30,6 +30,15 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* 21 Monitor 1920 x 1080  */
+
+@media (min-width: 1920px) {
+  .general {
+    max-width: 60vw;
+  }
+
 }
 
 /* iPad Air 820 x 1180  */

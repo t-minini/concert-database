@@ -115,7 +115,7 @@ export function EditCardPage() {
           id="concert-tour"
           label="Concert/Tour"
           variant="outlined"
-          name="concert"
+          name="tour"
           value={form.tour}
           onChange={handleChange}
         />

@@ -1,5 +1,5 @@
 .general {
-  max-width: 60vw;
+  max-width: 80vw;
   height: 100vh;
   text-align: center;
   margin: auto;
@@ -17,6 +17,13 @@
   margin-bottom: 10px !important;
   margin: auto !important;
   width: 70%;
+}
+
+@media (min-width: 1920px) {
+  .general {
+    max-width: 60vw;
+  }
+
 }
 
 /* iPad Air 820 x 1180  */
